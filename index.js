@@ -131,21 +131,28 @@ function removeFlavorByName(array, flavor){
 removeFlavorByName(originalFlavors, "Green Mango")
 
 
-/* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
+/* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. 
+Write a function called copy that makes a copy of the array. 
 
 Your function should accept: 
 
 2 arguments 1 for your new array and one for your original array
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
+ModFlavors = []
+function copy(original, newArrayz){
 
-function copy(/*code here*/){
-
-    /*code here*/
+    return original = newArrayz
 
 }
+copy(originalFlavors, ModFlavors)
+console.log(ModFlavors)
 
-/* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
+/* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting 
+all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns 
+a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, 
+pass a string as a parameter, and invoke with the argument "chocolate". 
+This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
 Your function should accept: 
 
@@ -160,11 +167,20 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
+function filterByWord(array, name){
+    
 
-    /*code here*/
+    for (let i = 0; i < array.length; i++){
+        if (array[i].includes(name)){
+            array.splice(array[i])
+            
+        }
+        return array;
+    }
+    
 
 }
+console.log(filterByWord(originalFlavors, "Chocolate"))
 
 
 
@@ -187,7 +203,7 @@ function getAverageWordLength(/*code here*/){
 }
 
 
-console.log(originalFlavors);
+// console.log(originalFlavors);
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
 Your function should accept 4 different arrays,
