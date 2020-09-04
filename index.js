@@ -51,7 +51,7 @@ function is31Flavors(array){
     }
 
 }
-console.log(is31Flavors(originalFlavors))
+// console.log(is31Flavors(originalFlavors))
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. 
 You need to modify the array to include this flavor. 
 
@@ -68,7 +68,8 @@ function addFlavor(array, flavor){
     return array.unshift(flavor)    
 
 }
- console.log(originalFlavors, "Green Mango")
+ console.log(addFlavor(originalFlavors, "Green Mango"))
+ console.log(originalFlavors)
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
 
