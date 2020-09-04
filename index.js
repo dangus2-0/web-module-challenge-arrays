@@ -68,8 +68,8 @@ function addFlavor(array, flavor){
     return array.unshift(flavor)    
 
 }
- console.log(addFlavor(originalFlavors, "Green Mango"))
- console.log(originalFlavors)
+//  console.log(addFlavor(originalFlavors, "Green Mango"))
+//  console.log(originalFlavors)
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
 
@@ -87,7 +87,8 @@ function removeLastFlavor(array){
 
 }
 
-console.log(removeLastFlavor(originalFlavor))
+console.log(removeLastFlavor(originalFlavors))
+console.log(originalFlavors)
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
 Your function should accept:
