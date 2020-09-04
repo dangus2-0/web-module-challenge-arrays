@@ -68,8 +68,8 @@ function addFlavor(array, flavor){
     return array.unshift(flavor)    
 
 }
-//  console.log(addFlavor(originalFlavors, "Green Mango"))
-//  console.log(originalFlavors)
+ addFlavor(originalFlavors, "Green Mango")
+
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
 
@@ -87,8 +87,8 @@ function removeLastFlavor(array){
 
 }
 
-console.log(removeLastFlavor(originalFlavors))
-console.log(originalFlavors)
+removeLastFlavor(originalFlavors)
+
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
 Your function should accept:
@@ -98,13 +98,17 @@ Your function should accept:
 
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
-function getFlavorByIndex(/*code here*/){
+function getFlavorByIndex(array, index){
 
-    /*code here*/
+    return array[index]
 
 }
+getFlavorByIndex(originalFlavors, 1)
 
-/* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
+/* Task 5: As corporate wants to add more and more flavors to their lineup, 
+they've realized that they need to remove flavors based on flavor name, 
+as opposed to just arbitrarily removing the first or last flavor. 
+Your task is to get an index by flavor name, and remove that flavor from the array. 
 
 Your function should accept: 
 
@@ -117,11 +121,14 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
+function removeFlavorByName(array, flavor){
+    let found = array.indexOf(flavor);
+    
 
-    /*code here*/
+    return array.splice(found, 1)
 
 }
+removeFlavorByName(originalFlavors, "Green Mango")
 
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
@@ -180,6 +187,7 @@ function getAverageWordLength(/*code here*/){
 }
 
 
+console.log(originalFlavors);
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
 Your function should accept 4 different arrays,
