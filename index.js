@@ -172,21 +172,22 @@ function filterByWord(array, name){
 
     for (let i = 0; i < array.length; i++){
         if (array[i].includes(name)){
-            array.splice(array[i])
+            array.splice(array[i], 1)
             
         }
-        return array;
+       return array; 
     }
     
 
 }
-console.log(filterByWord(originalFlavors, "Chocolate"))
-
+filterByWord(originalFlavors, "Chocolate")
+console.log(originalFlavors)
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
-/* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
+/* STRETCH 1: Write a function that returns the average number of words in an array. 
+You should be able to use this function for any array, but can test with originalFlavors.
 
 Your function should accept: 
 
@@ -196,9 +197,11 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(/*code here*/){
+function getAverageWordLength(array){
 
-    /*code here*/
+    for (let i = 0; i < array.length; i++){
+
+    }
 
 }
 
